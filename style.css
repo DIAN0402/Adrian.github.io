@@ -1,0 +1,665 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+:root{
+    --transition: all 300ms ease-in-out;
+    --light-color: white;
+}
+
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color: #b74b4b;
+    border-bottom: 3px solid #c1121f;
+}
+
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #c1121f;
+        border-bottom: 3px solid #c1121f;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    }
+
+    nav.active{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #c1121f;
+    }
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span{
+    color: #b74b4b;
+}
+
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-content p{
+    font-size: 1.6rem;
+}
+
+.home-img{
+    border-radius: 50%;
+}
+
+.home-img img{
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #c1121f;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #b74b4b;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #b74b4b;
+}
+
+.social-icons a:hover{
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #b74b4b;
+    box-shadow: 0  0 25px #b74b4b;
+}
+
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+.typing-text span::before{
+    content: "Software Developer";
+    color: #b74b4b;
+    animation: words 20s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid #b74b4b;
+    }
+}
+
+@keyframes words{
+    0%, 25%{
+        content: "Software Developer";
+    }
+    26%, 50%{
+        content: "Future SOC Analyst";
+    }
+    51%, 75%{
+        content: "Student";
+    }
+    76%, 100%{
+        content: "Photographer";
+    }
+    
+}
+
+.about-right{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 700;
+    height: 900;
+}
+
+.about-right img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    background-color: black;
+    transition: 0.3s;
+}
+
+.about-right #gg:hover{
+    opacity: 0;
+    cursor: pointer;
+}
+
+.about-right{
+    margin-bottom: 4rem;
+    height: 480px;
+    overflow: hidden;
+}
+
+button, .btn{
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: var(--dark-color);
+}
+img{
+    width: 100%;
+    display: block;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+.vh-100{
+    min-height: 100vh;
+}
+h1, h2, h3{
+    margin-top: 0;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+    color: var(--dark-color);
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.py-7{
+    padding: 7rem 0;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+}
+.lead{
+    opacity: 0.8;
+    padding: 1rem 0;
+    font-size: 1.7rem;
+    font-weight: 300;
+    line-height: 1.8;
+    justify-content: right;
+}
+
+.btn-down{
+    font-size: 3rem;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: var(--transition);
+}
+.btn-down:hover{
+    opacity: 0.8;
+    transform: translateY(5px);
+}
+.btn-down-white{
+    color: var(--light-color);
+}
+.title{
+    margin-bottom: 5rem;
+}
+.title h2{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+    position: relative;
+}
+.title h2::after{
+    position: absolute;
+    content: "";
+    top: 120%;
+    left: 0;
+    width: 70px;
+    height: 4px;
+    background-color: var(--dark-color);
+}
+
+.lead .lang{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.progress1{
+    position: relative;
+    width: 300px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.progress-fill1{
+    width: 50%;
+    height: 100%;
+    background-color: #9d0208;
+}
+
+.progress-text1{
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    font: bold 14px 'Quicksand', sans-serif;
+    transform: translateY(-50%);
+    color: #c1121f;
+}
+
+.progress2{
+    position: relative;
+    width: 300px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.progress-fill2{
+    width: 50%;
+    height: 100%;
+    background-color: #9d0208;
+}
+
+.progress-text2{
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    font: bold 14px 'Quicksand', sans-serif;
+    transform: translateY(-50%);
+    color: #c1121f;
+}
+
+.progress3{
+    position: relative;
+    width: 300px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.progress-fill3{
+    width: 25%;
+    height: 100%;
+    background-color: #9d0208;
+}
+
+.progress-text3{
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    font: bold 14px 'Quicksand', sans-serif;
+    transform: translateY(-50%);
+    color: #c1121f;
+}
+
+.progress4{
+    position: relative;
+    width: 300px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.progress-fill4{
+    width: 25%;
+    height: 100%;
+    background-color: #9d0208;
+}
+
+.progress-text4{
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    font: bold 14px 'Quicksand', sans-serif;
+    transform: translateY(-50%);
+    color: #c1121f;
+}
+
+.progress5{
+    position: relative;
+    width: 300px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.progress-fill5{
+    width: 100%;
+    height: 100%;
+    background-color: #9d0208;
+}
+
+.progress-text5{
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    font: bold 14px 'Quicksand', sans-serif;
+    transform: translateY(-50%);
+    color: #ffffff;
+}
+
+.progress6{
+    position: relative;
+    width: 300px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.progress-fill6{
+    width: 75%;
+    height: 100%;
+    background-color: #9d0208;
+}
+
+.progress-text6{
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    font: bold 14px 'Quicksand', sans-serif;
+    transform: translateY(-50%);
+    color: #c1121f;
+}
+
+.progress7{
+    position: relative;
+    width: 300px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.progress-fill7{
+    width: 75%;
+    height: 100%;
+    background-color: #9d0208;
+}
+
+.progress-text7{
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    font: bold 14px 'Quicksand', sans-serif;
+    transform: translateY(-50%);
+    color: #c1121f;
+}
+
+.progress8{
+    position: relative;
+    width: 300px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.progress-fill8{
+    width: 50%;
+    height: 100%;
+    background-color: #9d0208;
+}
+
+.progress-text8{
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    font: bold 14px 'Quicksand', sans-serif;
+    transform: translateY(-50%);
+    color: #c1121f;
+}
+
+.skill-content-bottom > div .icon img{
+    width: 50px;
+    margin: 0 auto 1.7rem auto;
+}
+
+.portfolio-project> div{
+    transition: var(--transition);
+}
+.portfolio-project > div:hover{
+    transform: scale(0.9);
+}
+
+.sdg-left{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 700;
+    height: 900;
+}
+
+.sdg-left img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    background-color: black;
+    transition: 0.3s;
+}
+
+.sdg-left #SDG16:hover{
+    opacity: 0;
+    cursor: pointer;
+}
+
+.sdg-left{
+    margin-bottom: 4rem;
+    height: 480px;
+    overflow: hidden;
+}
+
+#contact{
+    background-color: rgb(0, 0, 0);
+}
+.contact-content{
+    flex-direction: column;
+    align-items: stretch;
+}
+.contact-left{
+    margin-bottom: 5rem;
+}
+.contact-left .lead{
+    padding: 0.5rem;
+}
+.contact-left form{
+    margin-top: 3rem;
+}
+.contact-left form .form-control{
+    display: block;
+    margin: 1.6rem 0;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    width: 100%;
+}
+.contact-left form .form-control::placeholder{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+.contact-left .btn-submit{
+    padding: 1.4rem 3rem;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    margin-top: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.6rem;
+    transition: var(--transition);
+}
+.contact-left .btn-submit:hover{
+    background-color: #312f2f;
+}
+
+@media(min-width: 576px){
+    .title h2{
+        font-size: 4rem;
+    }
+    .portfolio-project {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+    .cs { grid-area: 1 / 1 / 2 / 2; }
+    .calcu { grid-area: 1 / 2 / 2 / 3; }
+    .grade { grid-area: 1 / 3 / 2 / 4; }
+    .contact-left form .form-control{
+        max-width: 500px;
+    }
+}
+
+@media(min-width: 768px){
+    
+    .about-content, .skills-top{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 6rem;
+        row-gap: 3rem;
+    }
+    .about-right{
+        margin-bottom: 0;
+    }
+    .sdg-content{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        column-gap: 30px;
+        row-gap: 0;
+    }
+    .sdg-left{
+        margin-bottom: 0;
+    }
+    .contact-content{
+        flex-direction: row;
+    }
+    .contact-right{
+        padding-left: 3rem;
+        width: 50%;
+    }
+    .contact-left{
+        width: 50%;
+    }
+}
+
+@media(min-width: 1200px){
+    .portfolio-project{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .portfolio-project > div:nth-child(2){
+        grid-column: 2/3;
+    }
+}
